@@ -9,17 +9,18 @@ pin_bwd = 21
 pin_lft = 27
 pin_rgt = 22
 
-while True:
-    print(16*"#","MENÜ",16*"#")
-    print()
-    print(" vorwärts:       fwd")
-    print(" rückwärts:      bwd")
-    print(" linksdrehen:    lft")
-    print(" rechtsdrehen:   rgt")
-    print()
-    print(38*"#")
-    print()
 
+print(16*"#","MENÜ",16*"#")
+print()
+print(" vorwärts:       fwd")
+print(" rückwärts:      bwd")
+print(" linksdrehen:    lft")
+print(" rechtsdrehen:   rgt")
+print()
+print(38*"#")
+print()
+
+while True:
     userDirection = input("Wählen Sie eine Fahrtrichtung durch \nEingabe des jeweiligen Kürzels aus: ")
 
     if userDirection == "fwd": 
@@ -29,28 +30,34 @@ while True:
         time.sleep(2)
         # GPIO.output(pin_fwd, # GPIO.LOW)
         # GPIO.cleanup()
+        break
 
-    if userDirection == "bwd": 
+    elif userDirection == "bwd": 
         # GPIO.setup(pin_bwd, # GPIO.OUT)
 
         # GPIO.output(pin_bwd, # GPIO.HIGH)
         time.sleep(2)
         # GPIO.output(pin_bwd, # GPIO.LOW)
         # GPIO.cleanup()
+        break
 
-    if userDirection == "lft": 
+    elif userDirection == "lft": 
         # GPIO.setup(pin_lft, # GPIO.OUT)
 
         # GPIO.output(pin_lft, # GPIO.HIGH)
         time.sleep(2)
         # GPIO.output(pin_lft, # GPIO.LOW)
         # GPIO.cleanup()
+        break
 
-    if userDirection == "rgt": 
+    elif userDirection == "rgt": 
         # GPIO.setup(pin_rgt, # GPIO.OUT)
 
         # GPIO.output(pin_rgt, # GPIO.HIGH)
         time.sleep(2)
         # GPIO.output(pin_rgt, # GPIO.LOW)
         # GPIO.cleanup()
+        break
+    else:
+        print("Eingabe war fehlerhaft. Bitte wiederholen")
 
